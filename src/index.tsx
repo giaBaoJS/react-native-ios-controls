@@ -312,14 +312,3 @@ export function addControlEventListener(
 export async function refreshControlEvents(): Promise<void> {
   await drain();
 }
-
-/** @internal Test-only hook that resets module state. */
-export function __resetForTests() {
-  configured = false;
-  listeners.clear();
-  bufferedEvents = [];
-  seenEventIds.length = 0;
-  seenEventIdSet.clear();
-  appStateSubscription?.remove();
-  appStateSubscription = null;
-}
