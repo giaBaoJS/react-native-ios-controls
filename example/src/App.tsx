@@ -122,14 +122,11 @@ export default function App() {
     };
   }, [readAll]);
 
-  const patch = useCallback(
-    async (kind: string, next: ControlState) => {
-      setStates((prev) => ({ ...prev, [kind]: { ...prev[kind], ...next } }));
-      await setControlState(kind, next);
-      await reloadControls(kind);
-    },
-    []
-  );
+  const patch = useCallback(async (kind: string, next: ControlState) => {
+    setStates((prev) => ({ ...prev, [kind]: { ...prev[kind], ...next } }));
+    await setControlState(kind, next);
+    await reloadControls(kind);
+  }, []);
 
   const reloadEverything = useCallback(async () => {
     setBusy(true);
@@ -178,12 +175,7 @@ export default function App() {
         )}
 
         {error != null && (
-          <Notice
-            palette={c}
-            tone="error"
-            title="Setup failed"
-            body={error}
-          />
+          <Notice palette={c} tone="error" title="Setup failed" body={error} />
         )}
 
         {!ready ? (
@@ -320,7 +312,11 @@ function ControlCard({
         <View
           style={[
             s.plate,
-            { backgroundColor: plateOn ? palette.glyphPlateOn : palette.glyphPlate },
+            {
+              backgroundColor: plateOn
+                ? palette.glyphPlateOn
+                : palette.glyphPlate,
+            },
           ]}
         >
           <Glyph
@@ -364,8 +360,12 @@ function ControlCard({
           testID={`title-${def.kind}`}
           value={draft}
           onChangeText={setDraft}
-          onEndEditing={() => onPatch({ title: draft.trim() || def.fallback.title })}
-          onSubmitEditing={() => onPatch({ title: draft.trim() || def.fallback.title })}
+          onEndEditing={() =>
+            onPatch({ title: draft.trim() || def.fallback.title })
+          }
+          onSubmitEditing={() =>
+            onPatch({ title: draft.trim() || def.fallback.title })
+          }
           returnKeyType="done"
           placeholder={def.fallback.title}
           placeholderTextColor={palette.textTertiary}
@@ -403,10 +403,7 @@ function ControlCard({
                   cutout={palette.surfaceRaised}
                 />
                 <Text
-                  style={[
-                    s.symbolChipLabel,
-                    active && { color: palette.text },
-                  ]}
+                  style={[s.symbolChipLabel, active && { color: palette.text }]}
                 >
                   {name}
                 </Text>
@@ -503,7 +500,9 @@ function EventStream({
                 s.eventBadgeText,
                 {
                   color:
-                    event.action === 'toggle' ? palette.accent : palette.positive,
+                    event.action === 'toggle'
+                      ? palette.accent
+                      : palette.positive,
                 },
               ]}
             >
@@ -556,7 +555,8 @@ function makeStyles(c: Palette) {
   return StyleSheet.create({
     root: { flex: 1, backgroundColor: c.canvas },
     scroll: {
-      paddingTop: Platform.OS === 'ios' ? 72 : (StatusBar.currentHeight ?? 24) + 24,
+      paddingTop:
+        Platform.OS === 'ios' ? 72 : (StatusBar.currentHeight ?? 24) + 24,
       paddingBottom: space.xxxl,
       paddingHorizontal: space.lg,
     },

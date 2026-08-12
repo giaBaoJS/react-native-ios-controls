@@ -27,10 +27,10 @@ const mono = Platform.select({
 /** One ramp, used everywhere. Sizes pair with a fixed line height. */
 export const type = {
   display: { fontSize: 30, lineHeight: 36, fontWeight: '700' },
-  title: { fontSize: 19, lineHeight: 24, fontWeight: '650' },
-  heading: { fontSize: 15, lineHeight: 20, fontWeight: '650' },
+  title: { fontSize: 19, lineHeight: 24, fontWeight: '600' },
+  heading: { fontSize: 15, lineHeight: 20, fontWeight: '600' },
   body: { fontSize: 15, lineHeight: 21, fontWeight: '400' },
-  label: { fontSize: 13, lineHeight: 17, fontWeight: '550' },
+  label: { fontSize: 13, lineHeight: 17, fontWeight: '600' },
   caption: { fontSize: 12, lineHeight: 16, fontWeight: '500' },
   mono: { fontSize: 12, lineHeight: 16, fontFamily: mono },
 } as const;

@@ -87,3 +87,4 @@ nitrogen/
 
 # Xcode project backups written by the setup CLI
 *.pbxproj.backup-*
+example/ios/build-nosign/
