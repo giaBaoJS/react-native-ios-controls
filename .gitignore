@@ -84,3 +84,6 @@ android/generated
 
 # React Native Nitro Modules
 nitrogen/
+
+# Xcode project backups written by the setup CLI
+*.pbxproj.backup-*

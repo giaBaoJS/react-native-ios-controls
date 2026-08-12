@@ -17,7 +17,7 @@
     "lib",
     "android",
     "ios",
-    "cpp",
+    "cli",
     "*.podspec",
     "react-native.config.js",
     "!ios/build",
@@ -36,12 +36,20 @@
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build",
     "typecheck": "tsc",
-    "lint": "eslint \"**/*.{js,ts,tsx}\""
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "test": "jest"
   },
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "control-center",
+    "controlwidget",
+    "widgetkit",
+    "lock-screen",
+    "action-button",
+    "turbomodule",
+    "app-intents",
+    "ios18"
   ],
   "repository": {
     "type": "git",
@@ -62,12 +70,16 @@
     "@eslint/js": "^10.0.1",
     "@react-native/babel-preset": "0.85.0",
     "@react-native/eslint-config": "0.85.0",
+    "@react-native/jest-preset": "0.85.0",
+    "@types/jest": "^29.5.14",
     "@types/react": "^19.2.0",
+    "babel-jest": "^29.7.0",
     "del-cli": "^7.0.0",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-ft-flow": "^3.0.11",
     "eslint-plugin-prettier": "^5.5.6",
+    "jest": "^29.7.0",
     "prettier": "^3.8.3",
     "react": "19.2.3",
     "react-native": "0.85.0",
@@ -123,5 +135,16 @@
       "eslint"
     ],
     "version": "0.63.0"
+  },
+  "bin": "./cli/index.js",
+  "jest": {
+    "preset": "@react-native/jest-preset",
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ]
   }
 }

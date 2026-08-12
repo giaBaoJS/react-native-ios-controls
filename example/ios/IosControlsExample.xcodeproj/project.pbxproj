@@ -9,20 +9,60 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-IosControlsExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-IosControlsExample.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1FC3587883F0B1D9EEBD2529 /* RNControlsWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E0ED6556FD8879AC9F0AF2 /* RNControlsWidgets.swift */; };
+		62F71AE673F54C90D793D7A3 /* RNControlsShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DDB666B04BC568AB57D67 /* RNControlsShared.swift */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		84DED21ED83EE48964B0481C /* RNControlsShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DDB666B04BC568AB57D67 /* RNControlsShared.swift */; };
+		89A28C4D85CC13988DDB9C51 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D635CBD44B7914ED95004 /* Controls.swift */; };
+		8E2F4B69AB795207BAA838CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF20EE4550E4F7C54130C79 /* Foundation.framework */; };
+		A991DBB3DCA031095E00F4EE /* RNControlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7090D1A3E38740BFC16B390 /* RNControlsConfig.swift */; };
+		AA28E8F3FB3605FC4DC513E7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		AC9334682460E7BE1B9A0E66 /* RNControlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7090D1A3E38740BFC16B390 /* RNControlsConfig.swift */; };
+		E2AC684F3FEEFFC5D1F13942 /* ControlsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A7BF666BF08AFE58B0748EBC /* ControlsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2C7A3936B9B503E9FCE04D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98FA4BF7E1D05D18ED4B41DE;
+			remoteInfo = ControlsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B402231E6D85D0AEBB2751DF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E2AC684F3FEEFFC5D1F13942 /* ControlsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* IosControlsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosControlsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = IosControlsExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = IosControlsExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = IosControlsExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2CF20EE4550E4F7C54130C79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		367D635CBD44B7914ED95004 /* Controls.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-IosControlsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosControlsExample.debug.xcconfig"; path = "Target Support Files/Pods-IosControlsExample/Pods-IosControlsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		56E0ED6556FD8879AC9F0AF2 /* RNControlsWidgets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RNControlsWidgets.swift; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-IosControlsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosControlsExample.release.xcconfig"; path = "Target Support Files/Pods-IosControlsExample/Pods-IosControlsExample.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-IosControlsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IosControlsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = IosControlsExample/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IosControlsExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A671DFB37ED93CAA381C1D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		902DDB666B04BC568AB57D67 /* RNControlsShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RNControlsShared.swift; sourceTree = "<group>"; };
+		A7BF666BF08AFE58B0748EBC /* ControlsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ControlsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7090D1A3E38740BFC16B390 /* RNControlsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RNControlsConfig.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,6 +72,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-IosControlsExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E735C0AFADFC5622EC4C2394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E2F4B69AB795207BAA838CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,9 +103,31 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-IosControlsExample.a */,
+				EB908272225BA1CDF4D948CB /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		4284F2F79E84B7016C538647 /* ReactNativeIosControls */ = {
+			isa = PBXGroup;
+			children = (
+				B7090D1A3E38740BFC16B390 /* RNControlsConfig.swift */,
+				902DDB666B04BC568AB57D67 /* RNControlsShared.swift */,
+			);
+			name = ReactNativeIosControls;
+			path = ReactNativeIosControls;
+			sourceTree = SOURCE_ROOT;
+		};
+		4748832D0D0B684CB7C2ACA3 /* ControlsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				367D635CBD44B7914ED95004 /* Controls.swift */,
+				56E0ED6556FD8879AC9F0AF2 /* RNControlsWidgets.swift */,
+				8A671DFB37ED93CAA381C1D0 /* Info.plist */,
+			);
+			name = ControlsExtension;
+			path = ControlsExtension;
+			sourceTree = SOURCE_ROOT;
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
@@ -74,6 +144,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				4748832D0D0B684CB7C2ACA3 /* ControlsExtension */,
+				4284F2F79E84B7016C538647 /* ReactNativeIosControls */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -84,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* IosControlsExample.app */,
+				A7BF666BF08AFE58B0748EBC /* ControlsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +168,14 @@
 				5709B34CF0A7D63546082F79 /* Pods-IosControlsExample.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB908272225BA1CDF4D948CB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2CF20EE4550E4F7C54130C79 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,15 +192,34 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				B402231E6D85D0AEBB2751DF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5AC50822DFE60CC4BFC21AB4 /* PBXTargetDependency */,
 			);
 			name = IosControlsExample;
 			productName = IosControlsExample;
 			productReference = 13B07F961A680F5B00A75B9A /* IosControlsExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		98FA4BF7E1D05D18ED4B41DE /* ControlsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12A3918D9D1AAC125BD00A71 /* Build configuration list for PBXNativeTarget "ControlsExtension" */;
+			buildPhases = (
+				342BF04CDC451381C1431EC1 /* Sources */,
+				E735C0AFADFC5622EC4C2394 /* Frameworks */,
+				40F753134B996C6D8D18533D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ControlsExtension;
+			productName = ControlsExtension;
+			productReference = A7BF666BF08AFE58B0748EBC /* ControlsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -148,6 +248,7 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* IosControlsExample */,
+				98FA4BF7E1D05D18ED4B41DE /* ControlsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +260,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				AA28E8F3FB3605FC4DC513E7 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F753134B996C6D8D18533D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,18 +354,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				A991DBB3DCA031095E00F4EE /* RNControlsConfig.swift in Sources */,
+				84DED21ED83EE48964B0481C /* RNControlsShared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		342BF04CDC451381C1431EC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A28C4D85CC13988DDB9C51 /* Controls.swift in Sources */,
+				1FC3587883F0B1D9EEBD2529 /* RNControlsWidgets.swift in Sources */,
+				AC9334682460E7BE1B9A0E66 /* RNControlsConfig.swift in Sources */,
+				62F71AE673F54C90D793D7A3 /* RNControlsShared.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5AC50822DFE60CC4BFC21AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ControlsExtension;
+			target = 98FA4BF7E1D05D18ED4B41DE /* ControlsExtension */;
+			targetProxy = B2C7A3936B9B503E9FCE04D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		08878A55A4CDF17DEADE94E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = ControlsExtension/ControlsExtension.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ControlsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ioscontrols.example.controls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-IosControlsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = IosControlsExample/IosControlsExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = IosControlsExample/Info.plist;
@@ -271,7 +428,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ioscontrols.example";
+				PRODUCT_BUNDLE_IDENTIFIER = ioscontrols.example;
 				PRODUCT_NAME = IosControlsExample;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -287,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = IosControlsExample/IosControlsExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = IosControlsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -300,7 +458,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ioscontrols.example";
+				PRODUCT_BUNDLE_IDENTIFIER = ioscontrols.example;
 				PRODUCT_NAME = IosControlsExample;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_VERSION = 5.0;
@@ -308,6 +466,30 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
+		};
+		474CD6EB975B47C14B34E25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = ControlsExtension/ControlsExtension.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ControlsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ioscontrols.example.controls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -370,6 +552,10 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -377,8 +563,13 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -435,6 +626,10 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
+				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -442,8 +637,12 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -451,6 +650,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12A3918D9D1AAC125BD00A71 /* Build configuration list for PBXNativeTarget "ControlsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08878A55A4CDF17DEADE94E4 /* Release */,
+				474CD6EB975B47C14B34E25C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "IosControlsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
