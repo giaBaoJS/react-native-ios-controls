@@ -264,7 +264,25 @@ Xcodeproj::Plist.write_to_path(app_entitlements_plist, app_entitlements_abs)
 
 # ------------------------------------------------------------- xcode target
 
-project.targets.select { |t| t.name == EXTENSION_NAME }.each { |t| t.remove_from_project } if FORCE
+if FORCE
+  project.targets.select { |t| t.name == EXTENSION_NAME }.each do |stale|
+    # Detach every reference to the target before dropping it. Removing the
+    # target on its own leaves the app's PBXTargetDependency pointing at
+    # nothing, and the next add_dependency then dies on a nil target.
+    project.targets.each do |other|
+      other.dependencies.delete_if { |dep| dep.target.nil? || dep.target.uuid == stale.uuid }
+      other.copy_files_build_phases.each do |phase|
+        phase.files
+             .select { |file| file.file_ref == stale.product_reference }
+             .each(&:remove_from_project)
+      end
+    end
+    stale.remove_from_project
+  end
+end
+
+# Also sweep dependencies left dangling by a target someone deleted in Xcode.
+app_target.dependencies.delete_if { |dep| dep.target.nil? }
 
 ext_target = project.new_target(:app_extension, EXTENSION_NAME, :ios, '18.0')
 
@@ -300,6 +318,9 @@ if embed_phase.nil?
   embed_phase.symbol_dst_subfolder_spec = :plug_ins
   embed_phase.dst_path = ''
 end
+embed_phase.files
+           .select { |file| file.display_name == "#{EXTENSION_NAME}.appex" }
+           .each(&:remove_from_project)
 embed_file = embed_phase.add_file_reference(ext_target.product_reference)
 embed_file.settings = { 'ATTRIBUTES' => ['RemoveHeadersOnCopy'] }
 app_target.add_dependency(ext_target)
